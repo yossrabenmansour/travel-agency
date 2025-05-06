@@ -1,0 +1,422 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+body{
+    font-family: 'Heebo';
+    font-size: 1.6rem;
+    margin: 0%;
+    color: #808B8D;
+}
+h1,
+h2,
+h3,
+h4,
+nav a{
+    font-family: 'Raleway';
+}
+h2,h3{
+    color: #2C3E50;
+   
+}
+/************Header****************/
+          /***menu**/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+nav div{
+    margin-top: 1rem;
+}
+nav a{
+    font-size: 2rem;
+    color: #48d6cf;
+    padding: 2rem ;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+
+}
+nav a:hover{
+    color:#2C3E50 ;
+   
+}
+.logo{
+    color: #48d6cf;
+}
+.logo i:hover{
+    color: #2C3E50 ;
+}
+
+header section{
+    background-image: url(images/bg-header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding:25%;
+    color: #2C3E50;
+    margin-top: 1rem;
+    text-align: center;
+}
+header section p{font-size: 2rem;}
+h1{font-size: 4rem;}
+
+  /*******Main**********/
+.about img {
+    float: right;
+    width: 40%;
+    animation: updown 3s linear infinite;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.about{
+    margin-left: 2rem;
+}
+.about a{
+    float: right;
+    background-color: #30d5c8;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    clear: both;
+    margin-top: 17px;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+h3{font-size: 2.5rem;}
+.about ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 400px;
+}
+.about ul li {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0; 
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+    cursor: pointer;
+  }
+.about ul li i {
+    margin-right: 10px;
+    color: #666; 
+    font-size: 1.8rem;
+   
+  }
+.about ul li i:hover {
+    color: #48d6cf;  
+ }
+
+  /**********Service*********/
+  .services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+  }
+h2 {
+  flex-basis: 100%;
+}
+.services article{
+    flex-basis:23%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; 
+    padding: 1rem;
+    margin-bottom: 10px;
+    transition:  0.3s ease;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.services i{
+    color:#48d6cf ;
+    font-size: 3rem;
+    margin-left: 40%;
+   
+   
+}
+.services article:hover{
+    transform: scale(1.1);
+}
+
+/*********Popular Destination*********/
+.Destinations img{
+    width: 100%;
+    display: block;
+    height: 200px;
+}
+.Destinations{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Destinations figure {
+    flex-basis: 30%;
+    margin: 0; 
+    padding: 0;
+}
+.Destinations figcaption {
+    border: 1px solid #e0e0e0;
+    padding: 20px; 
+}
+.Destinations div{
+    text-align: center;
+}
+/* Button de base */
+.Destinations button {
+    background-color: #30d5c8; 
+    color: white; 
+    padding: 3% 20%; 
+    border-radius: 25px; 
+    border: none;
+    cursor: pointer; 
+    position: relative; /* Necessaire bech n7ottou ::before mte3na */
+    overflow: hidden; /* Bech maytharich el contenu l'barra */
+    z-index: 1; /* Bech el texte ykoun fou9 el background */
+    transition: color 0.3s ease-in-out; /* Animation mta3 el texte */
+}
+
+/* L'état hover */
+.Destinations button:hover {
+    color: rgb(4, 1, 44); /* Loun el texte ki yetbadel*/
+}
+
+/* Effet de glissement (::before) */
+.Destinations button::before {
+    content: ""; /* Obligatoire*/
+    background: #bee9e5; /* Loun el effet de glissement */
+    width: 100%;
+    height: 100%; 
+    position: absolute; /* Position absolute par rapport au bouton */
+    top: 0; /* Commence depuis le haut */
+    left: -100%; /* Départ hors de l'écran (à gauche) */
+    z-index: -1; /* Bech ykoun taht el texte */
+    transition: left 0.3s ease-in-out; /* Animation de glissement */
+}
+
+/* Ki yet3ada 3la el bouton */
+.Destinations button:hover::before {
+    left: 0; /* Yet7arak mel left l'right */
+}
+
+.Destinations i {
+    color: #ffa500;
+    font-size: 2rem;
+}
+/********Special Offers********/
+.special-offers img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.special-offers{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.special-offers figure {
+    flex-basis: 30%;
+    margin: 0%;
+}
+.special-offers figcaption{
+    text-align: center;
+    flex-basis: 40%;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+.icon {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 10px; 
+}
+.special-offers .border{
+    border-left: 1px solid #e0e0e0;
+    padding: 0 10px; 
+}
+.special-offers i{
+    color:#48d6cf ;
+}
+.special-offers .a1,.a2{
+    display: inline-block;
+    background-color: #48d6cf;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+}
+.a1{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.a2{
+    border-top-right-radius:25px;
+    border-bottom-right-radius: 25px;
+    border-left: 1px solid  #808B8D ;
+}
+.a1:hover { opacity: 0.5; color:rgb(4, 1, 44) ;}
+.a2:hover { opacity: 0.5;  color:rgb(4, 1, 44) ;}
+/***************Footer****************/
+.bg-booking{
+    background-image: url(images/bg-booking.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 3rem ;
+    margin-bottom: 0%;
+}
+.part1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+form{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333333;
+    padding: 2rem;
+    border-radius: 10px;
+}
+form input, 
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+}
+.button {
+    background: #30d5c8;
+    color: rgb(22, 15, 15);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style de base */
+.part2 {
+    background-color: #252525;
+    color: white;
+    padding: 2rem 0;
+  }
+  
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Articles */
+  .contact article {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Titres */
+  .contact h4 {
+    color: #30d5c8;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Liens de contact */
+  .link-item {
+    margin-bottom: 0.8rem;
+  }
+  
+  .link-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .link-item a:hover {
+    color: #30d5c8;
+  }
+  
+  
+  .info-item {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-item i {
+    color: #30d5c8;
+    margin-right: 0.8rem;
+    width: 20px;
+    text-align: center;
+  }
+  
+  
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    transition:  ease 1s;
+  }
+  
+  .social-icons a:hover {
+    color: #30d5c8;
+    transform: scale(1.1, 1.1);/*** ne foncyionne pas !!! ***/
+  }
+  
+  
+  .newsletter-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .button {
+    background-color: #30d5c8;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #28c2b5;
+  }
+  
+  
